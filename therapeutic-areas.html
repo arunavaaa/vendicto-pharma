@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vendicto Pharma therapeutic areas — Anti-inflammatory, anti-bacterial, anti-cold, PPI, multivitamin, and calcium. Products for every key clinical condition." />
+  <title>Therapeutic Areas | Vendicto Pharma Pvt. Ltd.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <style>
+    /* Quick-jump sidebar for large screens */
+    .ta-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: var(--space-12);
+      align-items: flex-start;
+    }
+
+    .ta-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .ta-sidebar-title {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .ta-sidebar-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .ta-sidebar-link {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-lg);
+      border-left: 2px solid transparent;
+      transition: all var(--duration-fast);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .ta-sidebar-link:hover,
+    .ta-sidebar-link.active {
+      color: var(--navy);
+      background: var(--navy-soft);
+      border-left-color: var(--teal);
+    }
+
+    .ta-sidebar-link-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: var(--radius-full);
+      background-color: var(--border-dark);
+      flex-shrink: 0;
+      transition: background-color var(--duration-fast);
+    }
+
+    .ta-sidebar-link:hover .ta-sidebar-link-dot,
+    .ta-sidebar-link.active .ta-sidebar-link-dot {
+      background-color: var(--teal);
+    }
+
+    @media (max-width: 900px) {
+      .ta-layout { grid-template-columns: 1fr; }
+      .ta-sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Vendicto Pharma — Home">
+        <svg class="logo-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <path d="M20 18 Q28 10 24 3 Q17 7 20 18" fill="#F4793A"/>
+          <path d="M20 18 Q12 10 16 3 Q23 7 20 18" fill="#00897B"/>
+          <path d="M20 18 Q9 21 7 31 Q15 28 20 18" fill="#0B2C5F"/>
+          <path d="M20 18 Q31 21 33 31 Q25 28 20 18" fill="#1565C0"/>
+          <circle cx="20" cy="16" r="2.5" fill="#F8FAFB"/>
+        </svg>
+        <span class="logo-text">Vendicto Pharma<span>Pvt. Ltd.</span></span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html"                data-page="index.html">Home</a>
+        <a class="nav-link" href="about.html"                data-page="about.html">About Us</a>
+        <a class="nav-link" href="products.html"             data-page="products.html">Products</a>
+        <a class="nav-link" href="therapeutic-areas.html"    data-page="therapeutic-areas.html">Therapeutic Areas</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary btn-sm">Contact Us</a>
+        <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-mobile" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="nav-mobile-close" aria-label="Close navigation menu">&#x2715;</button>
+    <nav>
+      <a class="nav-link" href="index.html"             data-page="index.html">Home</a>
+      <a class="nav-link" href="about.html"             data-page="about.html">About</a>
+      <a class="nav-link" href="products.html"          data-page="products.html">Products</a>
+      <a class="nav-link" href="therapeutic-areas.html" data-page="therapeutic-areas.html">Therapeutic Areas</a>
+      <a class="nav-link" href="contact.html"           data-page="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Therapeutic Areas page header">
+      <div class="container">
+        <p class="page-hero-label">Clinical Coverage</p>
+        <h1>Therapeutic Areas</h1>
+        <p>We address a wide spectrum of health conditions through our carefully formulated product range — giving healthcare professionals the clinical tools they need across seven key areas.</p>
+      </div>
+    </section>
+
+    <!-- THERAPEUTIC AREAS CONTENT -->
+    <section class="section section--bg" id="ta-content">
+      <div class="container">
+        <div class="ta-layout">
+
+          <!-- Sidebar Quick-Jump -->
+          <aside class="ta-sidebar" aria-label="Jump to therapeutic area">
+            <p class="ta-sidebar-title">Therapeutic Areas</p>
+            <nav class="ta-sidebar-links">
+              <a class="ta-sidebar-link" href="#anti-inflammatory">
+                <span class="ta-sidebar-link-dot"></span>Anti-Inflammatory
+              </a>
+              <a class="ta-sidebar-link" href="#anti-bacterial">
+                <span class="ta-sidebar-link-dot"></span>Anti-Bacterials
+              </a>
+              <a class="ta-sidebar-link" href="#anti-cold">
+                <span class="ta-sidebar-link-dot"></span>Anti-Cold &amp; Allergics
+              </a>
+              <a class="ta-sidebar-link" href="#ppi">
+                <span class="ta-sidebar-link-dot"></span>PPI | Anti-Ulcerants
+              </a>
+              <a class="ta-sidebar-link" href="#multivitamin">
+                <span class="ta-sidebar-link-dot"></span>Multivitamins &amp; Antioxidants
+              </a>
+              <a class="ta-sidebar-link" href="#calcium">
+                <span class="ta-sidebar-link-dot"></span>Calcium &amp; Bone Health
+              </a>
+              <a class="ta-sidebar-link" href="#immunity">
+                <span class="ta-sidebar-link-dot"></span>Immunity
+              </a>
+            </nav>
+          </aside>
+
+          <!-- Area Sections -->
+          <div>
+
+            <!-- ANTI-INFLAMMATORY -->
+            <section class="ta-section reveal" id="anti-inflammatory" aria-labelledby="ta-title-1">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">4 Products</span>
+                  <h2 id="ta-title-1">Anti-Inflammatory</h2>
+                  <p>Our anti-inflammatory portfolio covers analgesics, proteolytic enzymes, and muscle relaxants — essential for managing acute and chronic pain, arthritis, post-surgical inflammation, and musculoskeletal disorders. Every product in this category is designed to offer multi-modal pain relief with optimal tolerability.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDICLO-P<sup style="font-size:0.65em;vertical-align:super">®</sup></p>
+                  <p class="ta-product-composition">Diclofenac Potassium 50mg + Paracetamol 325mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VINAC-P<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Aceclofenac 100mg + Paracetamol 325mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VINAC-SP<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 15mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VINAC-MR<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Aceclofenac 100mg + Paracetamol 325mg + Chlorzoxazone 250mg Tablets</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ANTI-BACTERIAL -->
+            <section class="ta-section reveal" id="anti-bacterial" aria-labelledby="ta-title-2">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 001.357 2.059l.25.125a5.25 5.25 0 012.643 4.875V19.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5v-1.225a5.25 5.25 0 012.643-4.875l.25-.125a2.25 2.25 0 001.357-2.059V3.104m9 0c.25.023.499.05.75.082M14.25 3.104a24.301 24.301 0 00-4.5 0" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">4 Products</span>
+                  <h2 id="ta-title-2">Anti-Bacterials</h2>
+                  <p>Bacterial infections demand precise, broad-spectrum coverage with minimal side effects. Our anti-bacterial range offers proven combination antibiotics — from penicillin combinations and cephalosporins to fluoroquinolones and macrolides — with probiotic support to maintain gut health during therapy.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDICLAV-625<sup style="font-size:0.65em;vertical-align:super">®</sup></p>
+                  <p class="ta-product-composition">Amoxicillin 500mg + Clavulanic Acid 125mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDICEF-LB<sup style="font-size:0.65em;vertical-align:super">®</sup></p>
+                  <p class="ta-product-composition">Cefixime 200mg + Lactic Acid Bacillus Dispersible Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">FLOXIVEN-OZ<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Ofloxacin 200mg + Ornidazole 500mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">AZITH-LB<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Azithromycin 500mg + Lactic Acid Bacillus 60 million spores Tablets</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- ANTI-COLD & ALLERGICS -->
+            <section class="ta-section reveal" id="anti-cold" aria-labelledby="ta-title-3">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">3 Products</span>
+                  <h2 id="ta-title-3">Anti-Cold &amp; Anti-Allergics</h2>
+                  <p>Respiratory and allergic conditions affect millions daily. Our range covers allergic rhinitis, bronchospasm, seasonal and perennial allergies, common cold, and chronic cough — with antihistamine, decongestant, and antitussive formulations that provide prompt, complete relief without sedation.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">LEVORZIN-M<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Levocetirizine Dihydrochloride 5mg + Montelukast Sodium 10mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDICOLD<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Phenylephrine HCl 5mg + Diphenhydramine HCl 25mg + Caffeine 30mg + Paracetamol 500mg Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDICOFF-DX<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Dextromethorphan HBr 10mg + Phenylephrine HCl 5mg + Chlorpheniramine Maleate 2mg per 5ml — Cough Syrup 100ml</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- PPI -->
+            <section class="ta-section reveal" id="ppi" aria-labelledby="ta-title-4">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">1 Product</span>
+                  <h2 id="ta-title-4">PPI | Anti-Ulcerants</h2>
+                  <p>Acid-related disorders — GERD, peptic ulcers, dyspepsia, and Zollinger-Ellison Syndrome — are among the most prevalent GI conditions. Our PPI combination provides both acid suppression and prokinetic benefit, offering more comprehensive symptom control than a PPI alone.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">PANRADOM<sup style="font-size:0.65em;vertical-align:super">®</sup></p>
+                  <p class="ta-product-composition">Pantoprazole 40mg (ER) + Domperidone 30mg (SR) Capsules</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- MULTIVITAMIN -->
+            <section class="ta-section reveal" id="multivitamin" aria-labelledby="ta-title-5">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">2 Products</span>
+                  <h2 id="ta-title-5">Multivitamins &amp; Antioxidants</h2>
+                  <p>Nutritional deficiencies are endemic in India, with consequences ranging from fatigue and immune weakness to cardiovascular and neurological disorders. Our multivitamin formulations provide complete micronutrient support with advanced antioxidant protection — in both tablet and liquid form for patient convenience.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">ZINCOVEN<sup style="font-size:0.65em;vertical-align:super">®</sup> Tablet</p>
+                  <p class="ta-product-composition">Multivitamins + Multiminerals + Antioxidants with Grape Seed Extract &amp; Lycopene Tablets</p>
+                </div>
+                <div class="ta-product-item">
+                  <p class="ta-product-name">ZINCOVEN<sup style="font-size:0.65em;vertical-align:super">®</sup> Syrup</p>
+                  <p class="ta-product-composition">Multivitamins + Multiminerals + Antioxidants with L-Lysine Syrup 200ml</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- CALCIUM -->
+            <section class="ta-section reveal" id="calcium" aria-labelledby="ta-title-6">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">1 Product</span>
+                  <h2 id="ta-title-6">Calcium &amp; Bone Health</h2>
+                  <p>Bone health is a lifelong concern — from pediatric growth and development to post-menopausal osteoporosis and age-related skeletal decline. Our calcium preparation combines the key nutrients for bone mineralisation, nerve function, and metabolic balance in a palatable liquid form for both children and adults.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">CALCIZID<sup style="font-size:0.65em;vertical-align:super">™</sup> Syrup</p>
+                  <p class="ta-product-composition">Calcium + Vitamin D3 + Vitamin B12 + Zinc + Magnesium Syrup 200ml</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- IMMUNITY -->
+            <section class="ta-section reveal" id="immunity" aria-labelledby="ta-title-7">
+              <div class="ta-section-header">
+                <div class="ta-section-icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="ta-section-meta">
+                  <span class="section-label">1 Product</span>
+                  <h2 id="ta-title-7">Immunity &amp; Antioxidant Support</h2>
+                  <p>In a post-pandemic era, immune support is a primary concern for patients across all age groups. Our immunobooster combines Vitamin C, Vitamin D3, and Zinc — three nutrients clinically validated for immune enhancement — with an antioxidant mechanism that activates the body's own defence enzymes.</p>
+                </div>
+              </div>
+
+              <div class="ta-products-list">
+                <div class="ta-product-item">
+                  <p class="ta-product-name">VENDIZED<sup style="font-size:0.65em;vertical-align:super">™</sup></p>
+                  <p class="ta-product-composition">Vitamin C 440mg + Vitamin D3 1000 IU + Zinc Sulphate Monohydrate 22.5mg Chewable Tablets (Orange Flavour)</p>
+                </div>
+              </div>
+            </section>
+
+          </div><!-- /area sections -->
+        </div><!-- /ta-layout -->
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner" aria-label="Products call to action">
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Want the Full Product List?</h2>
+          <p>View complete compositions, dosage details, and indications for every product in our portfolio.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="products.html" class="btn btn-white btn-lg">View All Products</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Contact for Enquiry</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="navbar-logo" aria-label="Vendicto Pharma — Home">
+          <svg class="logo-mark" width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 18 Q28 10 24 3 Q17 7 20 18" fill="#F4793A"/>
+            <path d="M20 18 Q12 10 16 3 Q23 7 20 18" fill="#00897B"/>
+            <path d="M20 18 Q9 21 7 31 Q15 28 20 18" fill="#4DB6AC"/>
+            <path d="M20 18 Q31 21 33 31 Q25 28 20 18" fill="#1565C0"/>
+            <circle cx="20" cy="16" r="2.5" fill="rgba(255,255,255,0.8)"/>
+          </svg>
+          <span class="logo-text">Vendicto Pharma<span>Pvt. Ltd.</span></span>
+        </a>
+        <p class="footer-tagline">Delivering quality branded generic pharmaceuticals to healthcare professionals across Maharashtra.</p>
+        <address class="footer-address" style="font-style:normal;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Block 7, Diwan Plaza, near Lokmat Square,<br>Ramdaspeth, Nagpur, Maharashtra 440010
+        </address>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Products</h4>
+        <ul class="footer-links">
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="therapeutic-areas.html">Therapeutic Areas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Reach Us</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Form</a></li>
+          <li><a href="https://maps.google.com/?q=Ramdaspeth+Nagpur+Maharashtra" target="_blank" rel="noopener noreferrer">Find Us on Map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Vendicto Pharma Pvt. Ltd. All rights reserved.</p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Highlight active sidebar link on scroll
+    const taLinks = document.querySelectorAll('.ta-sidebar-link');
+    const taSections = document.querySelectorAll('.ta-section');
+
+    if (taLinks.length && taSections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            taLinks.forEach(link => link.classList.remove('active'));
+            const id = entry.target.id;
+            const activeLink = document.querySelector(`.ta-sidebar-link[href="#${id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+
+      taSections.forEach(section => observer.observe(section));
+    }
+  </script>
+</body>
+</html>
