@@ -881,7 +881,7 @@ h4, .h4 {
 
 .hero-img {
   width: 100%;
-  height: clamp(360px, 48vh, 500px);
+  height: clamp(420px, 58vh, 580px);
   object-fit: cover;
   border-radius: 2rem;
   box-shadow: 0 24px 64px rgba(22, 60, 124, 0.22);
@@ -907,25 +907,15 @@ h4, .h4 {
   animation: float-badge-1 5s ease-in-out infinite;
 }
 
-.hero-float-badge--2 {
-  top: 40%;
-  right: 4px;
-  animation: float-badge-2 5s ease-in-out infinite 1.6s;
-}
-
 .hero-float-badge--3 {
   bottom: 8px;
   left: 4px;
-  animation: float-badge-3 5s ease-in-out infinite 3.2s;
+  animation: float-badge-3 5s ease-in-out infinite 2s;
 }
 
 @keyframes float-badge-1 {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
-}
-@keyframes float-badge-2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
 }
 @keyframes float-badge-3 {
   0%, 100% { transform: translateY(0); }
