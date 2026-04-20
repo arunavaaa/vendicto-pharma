@@ -25,21 +25,14 @@
   <header class="navbar hero-mode" role="banner">
     <div class="navbar-inner">
       <a href="index.html" class="navbar-logo" aria-label="Vendicto Pharma — Home">
-        <svg class="logo-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M20 18 Q28 10 24 3 Q17 7 20 18" fill="#F4793A"/>
-          <path d="M20 18 Q12 10 16 3 Q23 7 20 18" fill="#00897B"/>
-          <path d="M20 18 Q9 21 7 31 Q15 28 20 18" fill="#0B2C5F"/>
-          <path d="M20 18 Q31 21 33 31 Q25 28 20 18" fill="#1565C0"/>
-          <circle cx="20" cy="16" r="2.5" fill="#F8FAFB"/>
-        </svg>
+        <img src="brand-monogram.png" class="logo-mark" width="46" height="46" alt="Vendicto Pharma" />
         <span class="logo-text">Vendicto Pharma<span>Pvt. Ltd.</span></span>
       </a>
 
       <nav class="nav-links" role="navigation" aria-label="Primary navigation">
-        <a class="nav-link" href="index.html"                data-page="index.html">Home</a>
         <a class="nav-link" href="about.html"                data-page="about.html">About Us</a>
+        <a class="nav-link" href="#categories">Categories</a>
         <a class="nav-link" href="products.html"             data-page="products.html">Products</a>
-        <a class="nav-link" href="therapeutic-areas.html"    data-page="therapeutic-areas.html">Therapeutic Areas</a>
       </nav>
 
       <div class="nav-cta">
@@ -53,14 +46,23 @@
 
   <!-- Mobile Menu -->
   <div class="nav-mobile" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-    <button class="nav-mobile-close" aria-label="Close navigation menu">&#x2715;</button>
-    <nav>
-      <a class="nav-link" href="index.html"             data-page="index.html">Home</a>
-      <a class="nav-link" href="about.html"             data-page="about.html">About</a>
-      <a class="nav-link" href="products.html"          data-page="products.html">Products</a>
-      <a class="nav-link" href="therapeutic-areas.html" data-page="therapeutic-areas.html">Therapeutic Areas</a>
-      <a class="nav-link" href="contact.html"           data-page="contact.html">Contact</a>
-    </nav>
+    <div class="nav-mobile-overlay"></div>
+    <div class="nav-mobile-panel">
+      <div class="nav-mobile-header">
+        <a href="index.html" class="navbar-logo" aria-label="Vendicto Pharma — Home">
+          <img src="brand-monogram.png" class="logo-mark" width="46" height="46" alt="Vendicto Pharma" />
+          <span class="logo-text">Vendicto Pharma<span>Pvt. Ltd.</span></span>
+        </a>
+        <button class="nav-mobile-close" aria-label="Close navigation menu">&#x2715;</button>
+      </div>
+      <nav>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html"    data-page="about.html">About Us</a>
+        <a class="nav-link" href="#categories">Categories</a>
+        <a class="nav-link" href="products.html" data-page="products.html">Products</a>
+        <a class="nav-link" href="contact.html"  data-page="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </div>
 
   <main>
@@ -156,96 +158,105 @@
     </section>
 
     <!-- ============================================================
-         THERAPEUTIC AREAS
+         QUALITY CERTIFICATIONS
     ============================================================ -->
-    <section class="section section--bg" id="therapeutic-areas">
+    <section class="section section--bg certs-section" aria-label="Quality Certifications">
       <div class="container">
         <div class="section-header section-header--centered reveal">
-          <span class="section-label">What We Cover</span>
-          <h2>Our Therapeutic Areas</h2>
-          <p>A carefully formulated portfolio spanning six essential therapeutic categories, addressing the everyday and specialized healthcare needs of your patients.</p>
+          <span class="section-label">Standards We Uphold</span>
+          <h2>Quality Certifications</h2>
+          <p>Every product we manufacture meets the highest regulatory and safety benchmarks — because the health of your patients demands nothing less.</p>
         </div>
+      </div>
 
-        <div class="therapeutic-grid reveal">
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#anti-inflammatory" aria-label="Anti-Inflammatory — 4 products">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="certs-marquee">
+        <div class="certs-track">
+          <!-- Set 1 -->
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/FSSAI_logo.png" alt="FSSAI — Food Safety and Standards Authority of India" class="cert-logo" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">4 Products</p>
-            <h3>Anti-Inflammatory</h3>
-            <p>NSAIDs, analgesics, proteolytic enzymes, and muscle relaxants for pain management and inflammatory conditions.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#anti-bacterial" aria-label="Anti-Bacterials — 4 products">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 001.357 2.059l.25.125a5.25 5.25 0 012.643 4.875V19.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 19.5v-1.225a5.25 5.25 0 012.643-4.875l.25-.125a2.25 2.25 0 001.357-2.059V3.104m9 0c.25.023.499.05.75.082M14.25 3.104a24.301 24.301 0 00-4.5 0" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="cert-name">FSSAI Compliant</p>
+            <p class="cert-desc">Food Safety & Standards Authority of India</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/who-emblem.png" alt="WHO — World Health Organization" class="cert-logo" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">4 Products</p>
-            <h3>Anti-Bacterials</h3>
-            <p>Broad and targeted antibiotics for respiratory, urinary, skin, and GI bacterial infections with reliable efficacy.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#anti-cold" aria-label="Anti-Cold & Allergics — 3 products">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="cert-name">WHO-GMP</p>
+            <p class="cert-desc">World Health Organization Guidelines</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (1).png" alt="ISO 9001:2015 Certified Company" class="cert-logo cert-logo--lg" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">3 Products</p>
-            <h3>Anti-Cold &amp; Allergics</h3>
-            <p>Antihistamines, decongestants, and antitussives for allergic rhinitis, bronchospasm, cold, and cough management.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#ppi" aria-label="PPI & Anti-Ulcerants — 1 product">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="cert-name">ISO 9001:2015</p>
+            <p class="cert-desc">Quality Management System Certified</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (2).png" alt="GMP — Good Manufacturing Practice" class="cert-logo" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">1 Product</p>
-            <h3>PPI | Anti-Ulcerants</h3>
-            <p>Proton pump inhibitors and prokinetic combinations for acid-related disorders, GERD, ulcers, and dyspepsia.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#multivitamin" aria-label="Multivitamins — 3 products">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="cert-name">GMP Certified</p>
+            <p class="cert-desc">Good Manufacturing Practice Standards</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (3).png" alt="HACCP — Hazard Analysis Critical Control Point" class="cert-logo" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">3 Products</p>
-            <h3>Multivitamins &amp; Antioxidants</h3>
-            <p>Complete multivitamin, multimineral, and antioxidant formulations for nutritional support and immune health.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
-          <a class="therapeutic-card" href="therapeutic-areas.html#calcium" aria-label="Calcium & Bone Health — 2 products">
-            <div class="therapeutic-card-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p class="cert-name">HACCP</p>
+            <p class="cert-desc">Hazard Analysis Critical Control Point</p>
+          </div>
+          <div class="cert-item">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled.png" alt="Make in India" class="cert-logo cert-logo--lg" loading="lazy" />
             </div>
-            <p class="therapeutic-card-count">2 Products</p>
-            <h3>Calcium &amp; Bone Health</h3>
-            <p>Calcium, Vitamin D3, B12, and Zinc preparations for bone strength, growth support, and skeletal wellness.</p>
-            <span class="therapeutic-card-arrow">
-              View Products
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-
+            <p class="cert-name">Make in India</p>
+            <p class="cert-desc">Proudly Manufactured in India</p>
+          </div>
+          <!-- Set 2 — duplicate for seamless loop -->
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/FSSAI_logo.png" alt="" class="cert-logo" />
+            </div>
+            <p class="cert-name">FSSAI Compliant</p>
+            <p class="cert-desc">Food Safety & Standards Authority of India</p>
+          </div>
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/who-emblem.png" alt="" class="cert-logo" />
+            </div>
+            <p class="cert-name">WHO-GMP</p>
+            <p class="cert-desc">World Health Organization Guidelines</p>
+          </div>
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (1).png" alt="" class="cert-logo cert-logo--lg" />
+            </div>
+            <p class="cert-name">ISO 9001:2015</p>
+            <p class="cert-desc">Quality Management System Certified</p>
+          </div>
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (2).png" alt="" class="cert-logo" />
+            </div>
+            <p class="cert-name">GMP Certified</p>
+            <p class="cert-desc">Good Manufacturing Practice Standards</p>
+          </div>
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled (3).png" alt="" class="cert-logo" />
+            </div>
+            <p class="cert-name">HACCP</p>
+            <p class="cert-desc">Hazard Analysis Critical Control Point</p>
+          </div>
+          <div class="cert-item" aria-hidden="true">
+            <div class="cert-logo-wrap">
+              <img src="trust-logos/Untitled.png" alt="" class="cert-logo cert-logo--lg" />
+            </div>
+            <p class="cert-name">Make in India</p>
+            <p class="cert-desc">Proudly Manufactured in India</p>
+          </div>
         </div>
       </div>
     </section>
@@ -289,94 +300,94 @@
     </section>
 
     <!-- ============================================================
-         FEATURED PRODUCTS
+         PRODUCT CATEGORIES
     ============================================================ -->
-    <section class="section section--bg" id="featured-products">
+    <section class="section section--bg" id="categories">
       <div class="container">
         <div class="section-header section-header--centered reveal">
-          <span class="section-label">Our Portfolio</span>
-          <h2>Featured Products</h2>
-          <p>A selection of key products from our portfolio — trusted by healthcare professionals across Maharashtra.</p>
+          <span class="section-label">What We Offer</span>
+          <h2>Product Categories</h2>
+          <p>A comprehensive range of pharmaceutical formulations across dosage forms — designed for the diverse needs of healthcare professionals and their patients.</p>
         </div>
 
-        <div class="products-grid reveal">
+        <div class="categories-grid reveal">
 
-          <div class="product-card">
-            <span class="product-card-category">Anti-Inflammatory</span>
-            <h3 class="product-card-name">VENDICLO-P<sup class="product-card-sup">®</sup></h3>
-            <p class="product-card-composition">Diclofenac Potassium 50mg + Paracetamol 325mg Tablets<br>For pain, osteoarthritis, rheumatoid arthritis, and post-surgical inflammation.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Tablets / Capsules / Soft Gel</h3>
+            <p>Oral solid dosage forms offering precise dosing and convenient delivery across anti-infective, pain, and nutritional categories.</p>
           </div>
 
-          <div class="product-card">
-            <span class="product-card-category cat-antibacterial">Anti-Bacterial</span>
-            <h3 class="product-card-name">VENDICLAV-625<sup class="product-card-sup">®</sup></h3>
-            <p class="product-card-composition">Amoxicillin 500mg + Clavulanic Acid 125mg Tablets<br>Broad-spectrum cover for respiratory, urinary, and soft-tissue infections.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Injection</h3>
+            <p>Sterile parenteral formulations for rapid systemic action, used in acute and critical care settings.</p>
           </div>
 
-          <div class="product-card">
-            <span class="product-card-category cat-anticold">Anti-Cold &amp; Allergics</span>
-            <h3 class="product-card-name">LEVORZIN-M<sup class="product-card-sup">™</sup></h3>
-            <p class="product-card-composition">Levocetirizine 5mg + Montelukast 10mg Tablets<br>For allergic rhinitis, seasonal allergies, and co-morbid asthma management.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Cardiac / Diabetic Products</h3>
+            <p>Targeted formulations for managing cardiovascular conditions and blood glucose levels with clinical precision.</p>
           </div>
 
-          <div class="product-card">
-            <span class="product-card-category cat-ppi">PPI | Anti-Ulcerant</span>
-            <h3 class="product-card-name">PANRADOM<sup class="product-card-sup">®</sup></h3>
-            <p class="product-card-composition">Pantoprazole 40mg (ER) + Domperidone 30mg (SR) Capsules<br>Powerful PPI with prokinetic effect for GERD, ulcers, and dyspepsia.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Paediatric Dry Syrup</h3>
+            <p>Child-friendly antibiotic and wellness powders in easy-to-reconstitute form, precisely dosed for younger patients.</p>
           </div>
 
-          <div class="product-card">
-            <span class="product-card-category cat-multivitamin">Multivitamin</span>
-            <h3 class="product-card-name">ZINCOVEN<sup class="product-card-sup">®</sup></h3>
-            <p class="product-card-composition">Multivitamins + Multiminerals + Antioxidants with Grape Seed Extract &amp; Lycopene Tablets<br>For immunity, strength, and daily nutritional support.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.798-1.332 2.798H4.13c-1.36 0-2.332-1.798-1.332-2.798L4.2 15.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Syrup / Suspension</h3>
+            <p>Liquid oral formulations for patients who require easier swallowing alternatives, suitable for all age groups.</p>
           </div>
 
-          <div class="product-card">
-            <span class="product-card-category cat-calcium">Calcium &amp; Bone</span>
-            <h3 class="product-card-name">CALCIZID<sup class="product-card-sup">™</sup></h3>
-            <p class="product-card-composition">Calcium + Vit-D3 + Vit-B12 + Zinc + Magnesium Syrup 200ml<br>Complete bone and neural health support for all age groups.</p>
-            <div class="product-card-footer">
-              <span class="rx-badge">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><text x="0" y="10" font-size="10" fill="currentColor" font-style="italic" font-family="Georgia">Rx</text></svg>
-                Prescription
-              </span>
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
+            <h3>Derma Products</h3>
+            <p>Topical creams, gels, and ointments for skin conditions, infections, and comprehensive dermatological management.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Eye / Ear &amp; Nasal Drops</h3>
+            <p>Sterile ophthalmic and ENT solutions for precise, localized drug delivery in eye, ear, and nasal conditions.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>General Products</h3>
+            <p>Broad-spectrum healthcare formulations addressing common everyday therapeutic needs across multiple conditions.</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10.5a1 1 0 110-2 1 1 0 010 2z" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <h3>Paediatric Drop</h3>
+            <p>Concentrated, precisely dosed liquid drops formulated for safe and effective use in infants and young children.</p>
           </div>
 
         </div>
 
         <div class="text-center mt-10">
-          <a href="products.html" class="btn btn-secondary btn-lg">View All Products</a>
+          <a href="products.html" class="btn btn-secondary btn-lg">View Products</a>
         </div>
       </div>
     </section>
@@ -403,56 +414,27 @@
        FOOTER
   ============================================================ -->
   <footer class="footer" role="contentinfo">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div class="footer-brand">
         <a href="index.html" class="navbar-logo" aria-label="Vendicto Pharma — Home">
-          <svg class="logo-mark" width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <path d="M20 18 Q28 10 24 3 Q17 7 20 18" fill="#F4793A"/>
-            <path d="M20 18 Q12 10 16 3 Q23 7 20 18" fill="#00897B"/>
-            <path d="M20 18 Q9 21 7 31 Q15 28 20 18" fill="#4DB6AC"/>
-            <path d="M20 18 Q31 21 33 31 Q25 28 20 18" fill="#1565C0"/>
-            <circle cx="20" cy="16" r="2.5" fill="rgba(255,255,255,0.8)"/>
-          </svg>
+          <img src="brand-monogram.png" class="logo-mark" width="46" height="46" alt="Vendicto Pharma" />
           <span class="logo-text">Vendicto Pharma<span>Pvt. Ltd.</span></span>
         </a>
         <p class="footer-tagline">Delivering quality branded generic pharmaceuticals to healthcare professionals across Maharashtra.</p>
-        <address class="footer-address" style="font-style:normal;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Block 7, Diwan Plaza, near Lokmat Square,<br>Ramdaspeth, Nagpur, Maharashtra 440010
-        </address>
       </div>
-
-      <div>
-        <h4 class="footer-col-title">Company</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-col-title">Products</h4>
-        <ul class="footer-links">
-          <li><a href="products.html">All Products</a></li>
-          <li><a href="therapeutic-areas.html">Therapeutic Areas</a></li>
-          <li><a href="products.html?filter=anti-inflammatory">Anti-Inflammatory</a></li>
-          <li><a href="products.html?filter=anti-bacterial">Anti-Bacterials</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-col-title">Reach Us</h4>
-        <ul class="footer-links">
-          <li><a href="contact.html">Contact Form</a></li>
-          <li><a href="https://maps.google.com/?q=Ramdaspeth+Nagpur+Maharashtra" target="_blank" rel="noopener noreferrer">Find Us on Map</a></li>
-        </ul>
-      </div>
+      <address class="footer-address" style="font-style:normal;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Block 7, Diwan Plaza, near Lokmat Square,<br>Ramdaspeth, Nagpur, Maharashtra 440010
+      </address>
     </div>
 
     <div class="footer-bottom">
       <p class="footer-copyright">&copy; 2026 Vendicto Pharma Pvt. Ltd. All rights reserved. CIN: U24233MH2020PTC340000</p>
-      <nav class="footer-legal" aria-label="Legal links">
+      <nav class="footer-all-links" aria-label="Footer links">
+        <a href="about.html">About Us</a>
+        <a href="#categories">Categories</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
       </nav>

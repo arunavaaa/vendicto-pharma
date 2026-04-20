@@ -8,7 +8,8 @@
 - Tone: Authoritative, trustworthy, professional — not clinical/cold
 
 ## Design Direction
-- Colors: Deep navy #0B2C5F (dominant) + Teal #00897B (accent) + Off-white #F8FAFB (bg)
+- Colors: Navy #163C7C (primary/dominant) + Cyan-teal #29B8D8 (accent) + Off-white #F8FAFB (bg)
+- Color source: extracted from official Vendicto Pharma brand brochure image
 - Fonts: DM Serif Display (headlines) + Plus Jakarta Sans (body)
 - Feel: Premium B2B pharma — think precision + warmth. NOT generic hospital blue.
 
