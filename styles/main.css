@@ -119,6 +119,7 @@ body {
   line-height: 1.7;
   color: var(--text-primary);
   background-color: var(--bg);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -321,15 +322,31 @@ h4, .h4 {
 }
 
 @media (max-width: 640px) {
-  .navbar-logo .logo-mark { display: none; }
+  .navbar-inner {
+    gap: var(--space-2);
+  }
+  .navbar-logo {
+    flex-shrink: 1;
+    min-width: 0;
+    gap: var(--space-2);
+  }
+  .navbar-logo .logo-mark {
+    width: 30px;
+    height: 30px;
+  }
   .navbar-logo .logo-text {
-    display: block;
-    font-size: var(--text-base);
+    font-size: 0.8rem;
     line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .navbar-logo .logo-text span {
-    font-size: 9px;
-    letter-spacing: 0.06em;
+    font-size: 8px;
+    letter-spacing: 0.05em;
+  }
+  .nav-cta {
+    gap: var(--space-2);
   }
 }
 
@@ -508,7 +525,7 @@ h4, .h4 {
 .nav-mobile-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-bottom: var(--space-5);
   margin-bottom: var(--space-2);
   border-bottom: 1px solid var(--border);
