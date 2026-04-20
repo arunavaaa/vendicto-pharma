@@ -996,6 +996,7 @@ h4, .h4 {
     border-radius: 1.25rem;
     object-position: center 18%;
   }
+  .hero-headline { padding-top: 12px; }
   .hero-float-badge { display: none; }
   .hero-ctas .btn-secondary { display: none; }
   .hero-scroll { display: none; }
