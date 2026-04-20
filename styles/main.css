@@ -347,11 +347,11 @@ h4, .h4 {
 }
 
 .navbar.hero-mode .logo-text {
-  color: var(--navy);
+  color: var(--white);
 }
 
 .navbar.hero-mode .logo-text span {
-  color: var(--teal);
+  color: var(--teal-mid);
 }
 
 .nav-links {
@@ -371,7 +371,7 @@ h4, .h4 {
 }
 
 .navbar.hero-mode .nav-link {
-  color: var(--text-primary);
+  color: rgba(255,255,255,0.85);
 }
 
 .nav-link::after {
@@ -395,8 +395,8 @@ h4, .h4 {
 
 .navbar.hero-mode .nav-link:hover,
 .navbar.hero-mode .nav-link.active {
-  color: var(--navy);
-  background-color: var(--navy-soft);
+  color: var(--white);
+  background-color: rgba(255,255,255,0.12);
 }
 
 .nav-link.active::after,
@@ -406,7 +406,7 @@ h4, .h4 {
 
 .navbar.hero-mode .nav-link.active::after,
 .navbar.hero-mode .nav-link:hover::after {
-  background-color: var(--teal);
+  background-color: var(--teal-mid);
 }
 
 .nav-cta {
@@ -444,7 +444,7 @@ h4, .h4 {
 }
 
 .navbar.hero-mode .nav-hamburger span {
-  background-color: var(--navy);
+  background-color: var(--white);
 }
 
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }

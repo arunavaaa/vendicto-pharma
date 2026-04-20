@@ -18,8 +18,8 @@ const hamburger   = document.querySelector('.nav-hamburger');
 const mobileMenu  = document.querySelector('.nav-mobile');
 const mobileClose = document.querySelector('.nav-mobile-close');
 
-// Determine if the page has a hero (dark background) behind the navbar
-const hasHero = document.querySelector('.hero') || document.querySelector('.page-hero');
+// Determine if the page has a dark page-hero behind the navbar (not the light home hero)
+const hasHero = document.querySelector('.page-hero');
 
 function updateNavbar() {
   const scrolled = window.scrollY > 20;
