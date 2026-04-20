@@ -321,7 +321,16 @@ h4, .h4 {
 }
 
 @media (max-width: 640px) {
-  .navbar-logo .logo-text { display: none; }
+  .navbar-logo .logo-mark { display: none; }
+  .navbar-logo .logo-text {
+    display: block;
+    font-size: var(--text-base);
+    line-height: 1.15;
+  }
+  .navbar-logo .logo-text span {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
 }
 
 .navbar-logo:hover .logo-mark {
