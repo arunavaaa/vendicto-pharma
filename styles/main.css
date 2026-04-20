@@ -984,21 +984,25 @@ h4, .h4 {
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    padding-block: clamp(3rem, 7vh, 5rem) clamp(2rem, 5vh, 3rem);
+    padding-block: clamp(4.5rem, 9vh, 6rem) clamp(2rem, 5vh, 3rem);
   }
   .hero-visual {
     display: flex;
-    margin-top: var(--space-4);
+    margin-top: var(--space-2);
   }
   .hero-img-wrap { padding: 0; }
   .hero-img {
-    height: 240px;
+    height: 260px;
     border-radius: 1.25rem;
+    object-position: center 18%;
   }
   .hero-float-badge { display: none; }
   .hero-ctas .btn-secondary { display: none; }
   .hero-scroll { display: none; }
-  .hero-subtext { font-size: var(--text-base); }
+  .hero-subtext {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-6);
+  }
 }
 
 /* --------------------------------------------------------------------------
