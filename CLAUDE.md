@@ -17,7 +17,7 @@
 - Pure HTML/CSS/JS — no frameworks, no npm
 - Mobile-first responsive
 - Always read and apply the crayon-studios-frontend skill before building
-- File naming: index.html, about.html, products.html, therapeutic-areas.html, contact.html
+- File naming: index.html, about.html, products.html, contact.html
 
 ## Skills to Activate
 Before writing any code, read and apply:
