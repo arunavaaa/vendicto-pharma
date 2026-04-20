@@ -331,18 +331,18 @@ h4, .h4 {
     gap: var(--space-2);
   }
   .navbar-logo .logo-mark {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
   }
   .navbar-logo .logo-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.15;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .navbar-logo .logo-text span {
-    font-size: 8px;
+    font-size: 9px;
     letter-spacing: 0.05em;
   }
   .nav-cta {
@@ -909,7 +909,7 @@ h4, .h4 {
 
 .hero-float-badge--3 {
   bottom: 8px;
-  left: 4px;
+  right: 4px;
   animation: float-badge-3 5s ease-in-out infinite 2s;
 }
 
@@ -982,8 +982,23 @@ h4, .h4 {
 }
 
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding-block: clamp(3rem, 7vh, 5rem) clamp(2rem, 5vh, 3rem);
+  }
+  .hero-visual {
+    display: flex;
+    margin-top: var(--space-4);
+  }
+  .hero-img-wrap { padding: 0; }
+  .hero-img {
+    height: 240px;
+    border-radius: 1.25rem;
+  }
+  .hero-float-badge { display: none; }
+  .hero-ctas .btn-secondary { display: none; }
+  .hero-scroll { display: none; }
+  .hero-subtext { font-size: var(--text-base); }
 }
 
 /* --------------------------------------------------------------------------
