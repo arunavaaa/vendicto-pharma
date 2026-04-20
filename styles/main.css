@@ -873,33 +873,70 @@ h4, .h4 {
   position: relative;
 }
 
-.hero-visual-card {
-  background: var(--white);
-  border: 1px solid rgba(22, 60, 124, 0.1);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  box-shadow: 0 8px 40px rgba(22, 60, 124, 0.1);
+.hero-img-wrap {
+  position: relative;
   width: 100%;
-  max-width: 380px;
+  padding: 28px 28px 28px 32px;
 }
 
-.hero-stat-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
+.hero-img {
+  width: 100%;
+  height: clamp(360px, 48vh, 500px);
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 24px 64px rgba(22, 60, 124, 0.22);
+  display: block;
 }
 
-.hero-stat-item {
+.hero-float-badge {
+  position: absolute;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: 10px;
+  box-shadow: 0 8px 28px rgba(22, 60, 124, 0.14);
+  white-space: nowrap;
+  z-index: 2;
 }
 
-.hero-stat-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-xl);
-  background: rgba(22, 60, 124, 0.08);
+.hero-float-badge--1 {
+  top: 8px;
+  left: 4px;
+  animation: float-badge-1 5s ease-in-out infinite;
+}
+
+.hero-float-badge--2 {
+  top: 40%;
+  right: 4px;
+  animation: float-badge-2 5s ease-in-out infinite 1.6s;
+}
+
+.hero-float-badge--3 {
+  bottom: 8px;
+  left: 4px;
+  animation: float-badge-3 5s ease-in-out infinite 3.2s;
+}
+
+@keyframes float-badge-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes float-badge-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes float-badge-3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.hero-float-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(22, 60, 124, 0.1);
   color: var(--navy);
   display: flex;
   align-items: center;
@@ -907,17 +944,23 @@ h4, .h4 {
   flex-shrink: 0;
 }
 
-.hero-stat-info strong {
+.hero-float-icon--teal {
+  background: rgba(41, 184, 216, 0.15);
+  color: var(--teal);
+}
+
+.hero-float-text strong {
   display: block;
-  font-size: var(--text-xl);
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--navy);
   line-height: 1.2;
 }
 
-.hero-stat-info span {
-  font-size: var(--text-sm);
+.hero-float-text span {
+  font-size: var(--text-xs);
   color: var(--text-secondary);
+  line-height: 1.3;
 }
 
 .hero-scroll {
